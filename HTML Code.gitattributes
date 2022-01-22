@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Login form</title>
+		<link rel="stylesheet" type="text/css" href="./loginPageStyle.css">
+		<script>
+			function login(){
+		var uname = document.getElementById("email").value;
+		var pwd = document.getElementById("pwd").value;
+		var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+		//Validate blank Username
+		if(uname =='')
+		{
+			alert("please enter user name.");
+		}
+		//Validate blank password
+		else if(pwd=='')
+		{
+        	alert("enter the password");
+		}
+		//Validate Username email ID format
+		else if(!filter.test(uname))
+		{
+			alert("Enter valid email id.");
+		}
+		//Validate password length
+		else if(pwd.length < 6 || pwd.length > 6)
+		{
+			alert("Password min and max length is 6.");
+		}
+		else
+		{
+	alert('Thank You for Login & You are Redirecting to Campuslife Website');
+  //Redirecting to other page or webste code or you can set your own html page.
+       window.location = "https://www.w3resource.com/c-programming-exercises/array/index.php";
+		}
+	}
+	//Reset Inputfield code.
+	function clearFunc(){
+		document.getElementById("email").value="";
+		document.getElementById("pwd").value="";           
+	}	
+		</script>
+	</head>
+<body>
+	<div class="login-form">
+		<h1>Login form</h1>
+		<div>
+			<p>User Name</p>
+	    	<input type="text" name="user" id="email" placeholder="User Name">
+	    	<p>Password</p>
+	    	<input type="password" name="password" id="pwd" placeholder="Password">
+	    	<button type="submit" value="Reset" class="button" onClick="clearFunc()">Reset</button>
+	        <button type="submit" value="Login" class="button" onClick="login()">Login</button>
+	    </div>
+	</div>
+</body>
+</html>
