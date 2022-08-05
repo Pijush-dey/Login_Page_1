@@ -35,7 +35,7 @@
        window.location = "https://www.w3resource.com/c-programming-exercises/array/index.php";
 		}
 	}
-	//Reset Inputfield code.
+	//Reset Inputfield code and automation done .
 	function clearFunc(){
 		document.getElementById("email").value="";
 		document.getElementById("pwd").value="";           
